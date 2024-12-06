@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div style="text-align:center; font-family:'Arial'" lang="en-us">
-		<h1>Some of my work recreating my Alfa Romeo 156</h1>
+		<h1>Some of my work modeling my Alfa Romeo 156</h1>
 		<br>
 		<br>
 		<br>
@@ -71,19 +71,33 @@
 		<br>
 		<br>
 		<br>
-		I taped my phone to the car and drove around, using its sensors to gather data on the car's pitch/roll under longitudinal and lateral acceleration.<br>
-		Knowing the car's center of gravity height and suspension geometry, I hope to be able to approximate the front and rear wheel rate and anti-roll bar stiffness thanks to this data.<br>
+		I taped my phone to the car and drove around, using its IMU to gather data on the car's pitch/roll under longitudinal and lateral acceleration.<br>
+		Having defined the car's center of gravity height and suspension geometry, I am able to approximate the front and rear wheel rate and anti-roll bar stiffness thanks to this data.<br>
 
 		<img src="roll.svg" height="800" />
 		<br>
 		<img src="pitch.svg" height="800" />
 		<br>
 		
-		<img src="braking.jpg" height="300" />
-		<img src="turning.jpg" height="300" />
+		<img src="magny-coursFront.jpg" height="400" />
+		<img src="magny-coursBack.jpg" height="400" />
+		<br>
+		I recently had the awesome opportunity to drive my car on the Magny-Cours F1 Grand-Prix layout at a trackday.<br>
+		I anticipated this would be the ideal time to compare my physics model against the real car. Unfortunately, we were only able to complete a couple of laps because of the fog.<br>
+		<br>
+		The damp track and traffic meant I could not objectively compare lap time, corner speed or braking points.<br>
+		<br>
+		Still, my two laps were still of some use :<br>
+		The IMU logs allowed me to correct the car's drag coefficient (which I can't currently get from CFD as I haven't modeled the car's floor),<br>
+		and driving the car on the edge of grip convinced me the lightness of the rear I felt in the sim was just as present in real life.
+		<br>
+		<img src="lap0Visu.png" height="500" />
+		<img src="lap1Visu.png" height="500" />
 		<br>
 		<br>
 		<br>
+		<br>
+		
 		
 		<h2>
 		Engine sound recreation
