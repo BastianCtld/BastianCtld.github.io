@@ -1,0 +1,20 @@
+body {
+    font-family: Open Sans, Arial;
+    color: #000000;
+    font-size: 16px;
+    margin: 2em auto;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 1em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+img {
+    width: 800px;
+    height: auto;
+}
+
+h1 {
+    padding: 1em;
+}

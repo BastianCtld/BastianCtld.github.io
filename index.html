@@ -2,152 +2,150 @@
 <html lang="fr">
 <head>
 	<meta content="BBEdit 15.0" charset="utf-8">
+	<meta name="description" content="Development showcase of my Alfa Romeo 156 for Assetto Corsa">
+	<meta name="author" content="Bastian Cataldi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alfa Romeo 156 showcase</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div style="text-align:center; font-family:'Arial'" lang="en-us">
+	<div lang="en-us">
+		<header>
 		<h1>Some of my work modeling my Alfa Romeo 156</h1>
-		<br>
-		<br>
-		<br>
-		<br>
-		<img src="alfaNarrow.jpg" height="600" />
-		<br>
-		I am in the process of modeling my car for the simulation game Assetto Corsa.<br>
-		This Alfa Romeo 156 is very fun to drive thanks to its great engine and unique suspension setup,
-		and I am attempting to faithfully convey this in my recreation.<br>
-		<br>
-		The following is an overview of the different parts of the work I have done to achieve this goal.
-		
-		<br>
-		<br>
-		<br>
-		
-		<h2>
-		3D modeling
-		</h2>
-		
-		<img src="photovs3D.jpg" width="800" />
-		<br>
-		<img src="side.jpg" width="800" />
-		<br>
-		<img src="photovs3DArriere.jpg" width="800" />
-		<br>
-		I made my own 3D model of the car from scratch because I wanted to learn 3D modeling,
-		I wanted the result to be custom-made for Assetto Corsa, and there was no good 3D model of the
-		car online to base my work on.<br>
-		I used photoscanning to create a base for me to model over using Blender.<br>
-		While I was more interested in modeling the physics, I find this car truly beautiful, so it was important for me to accurately replicate its looks and I am satisfied with the result. <br>
-		
-		<br>
-		<br>
-		<br>
-		<img src="scanInterior.jpg" height="300" />
-		<img src="interieur.jpg" height="300" />
-		<img src="interieurTex.jpg" height="300" />
-		<br>
-		Here is the interior geometry. The same process of photoscanning was used.<br>
-		
-		<br>
-		<br>
-		<br>
-		
-		<h2>
-		Physics modeling
-		</h2>
-		
-		<img src="inclineCoG.jpg" height="400" />
-		<img src="suspension.jpg" height="400" />
-		<br>
-		Modeling the physics of the car accurately is tricky because 
-		Fiat hasn't shared a lot of technical information on this car.<br>
-		While I have to guess and estimate for some of the data, I try to base 
-		my modeling on measurements as much as possible.<br>
-		<br>
-		The scan in the first image was taken on an incline at a farm's axle weighing scale to try to calculate the height of the car's center of gravity.<br>
-		I scanned my suspension as seen on the second image to accurately model the suspension geometry.<br>
-		This car has Alfa's special multilink setup at the rear, giving it noticeable passive rear-wheel steering, which I hope to replicate in-game.<br>
-		
-		<br>
-		<br>
-		<br>
-		I taped my phone to the car and drove around, using its IMU to gather data on the car's pitch/roll under longitudinal and lateral acceleration.<br>
-		Having defined the car's center of gravity height and suspension geometry, I am able to approximate the front and rear wheel rate and anti-roll bar stiffness thanks to this data.<br>
+		</header>
+		<img src="alfaNarrow.jpg"/>
+		<p>One of my personal projects has been to model my car for the simulation game Assetto Corsa.</p>
+		<p>This Alfa Romeo 156 is very fun to drive thanks to its great engine and unique suspension setup,
+		and I have attempted to faithfully convey this in my recreation.<br></p>
+		<p>The following is an overview of the different parts of the work I have done to achieve this goal.</p>
 
-		<img src="roll.svg" height="800" />
+		<h1>
+		3D modeling
+		</h1>
+		<p>I made my own 3D model of the car from scratch because I wanted to learn 3D modeling,
+		I wanted the result to be custom-made for Assetto Corsa, and there was no good 3D model of the
+		car online to base my work on.</p>
+		<p>I used photoscanning to create a base for me to model over using Blender.</p>
+		<p>While I was more interested in modeling the physics, I find this car truly beautiful, so it was important for me to accurately replicate its looks and I am satisfied with the result.
+		</p>
+		<img src="photovs3D.jpg"/>
 		<br>
-		<img src="pitch.svg" height="800" />
+		<img src="side.jpg"/>
 		<br>
-		<img src="simuData.png" height="220" />
+		<img src="photovs3DArriere.jpg"/>
+		<br>
+		<p>The biggest challenge of modeling the mesh for me was marrying large sweeping curves with high frequency details in the subdivision workflow of Blender.
+		Adding detail in an area would deform the larger curves and make the panels look wobbely.
+	</p>
+		<p>On the front doors for example, the geometry of the grip recess of the door handle clashed with the large curvature of the side of the car.
+		</p>
+		<p>I had to make use of the shrinkwrap modifier to keep surrounding areas in place,
+			and so to be able to model the finer details while keeping the surrounding curves stuck to their original shape.
+		</p>
+		
+		<p>The topology is still not great, but thanks to the shrinkwrap, the result looks correct. </p>
+
+		<img src="porteBrillant.jpg"/>
+		
 		<br>
 		<br>
+		<p>For the interior geometry, the same process of photoscanning was used.</p>
+
+		<img src="scanInterior.jpg" style="height: 300px; width: auto;"/>
+		<img src="interieur.jpg" style="height: 300px; width: auto;"/>
+		<img src="interieurRender.jpg" style="height: 300px; width: auto;"/>
+		
+		<h1>
+		Physics modeling
+		</h1>
+		<p>Modeling the physics of the car accurately was tricky at first because I didn't know where to look for data beyond the workshop manual.<br>
+			Over time, I have found Fiat's eLearn and ePER pages, from where I could source spring rates, damper ranges, anti-roll bar diameters and part weights.
+		</p>
+		<p>To accurately model the suspension geometry, I scanned the suspension with photogrammetry as shown below.<br>
+			This car has Alfa's asymetrical multilink setup at the rear. Toe is set up to heavily change with wheel travel, giving the car passive rear-wheel steering.</p>
+		<img src="frontScan.jpg"/>
+		<img src="lasArriere.jpg"/>
+
+
 		<br>
 		<br>
+
+		<p>I initially hoped I might be able to approximate anti-roll bar and spring stifness by using my phone's IMU to gather data on the car's pitch/roll under longitudinal and lateral acceleration.<br>
+		In the end, there was too much uncertainty in the all the parameters I have to get anything meaningful out of it.
+
+		<p>
+		In the final version, I ended up finding the real spring rate while uncovering Fiat documentation, and calculating the anti-roll bars stiffness from their geometry. <br>
+		These measurements might only be useful for quality assurance.
+		</p>
+
+		<img src="roll.svg" />
+		<br>
+		<img src="simuData.png"/>
+		<br>
+
 		<br>
 		<br>
 		
-		<img src="magny-coursFront.jpg" height="400" />
-		<img src="magny-coursBack.jpg" height="400" />
-		<br>
-		I recently had the awesome opportunity to drive my car on the Magny-Cours F1 Grand-Prix layout at a trackday.<br>
-		I anticipated this would be the ideal time to compare my physics model against the real car. Unfortunately, we were only able to complete a couple of laps because of the fog.<br>
-		<br>
-		The damp track and traffic meant I could not objectively compare lap time, corner speed or braking points.<br>
-		<br>
-		Still, my two laps were still of some use :<br>
-		The IMU logs allowed me to correct the car's drag coefficient (which I can't currently get from CFD as I haven't modeled the car's floor),<br>
-		and driving the car on the edge of grip convinced me the lightness of the rear I felt in the sim was just as present in real life.
-		<br>
-		<img src="lap0Visu.png" height="500" />
-		<img src="lap1Visu.png" height="500" />
-		<br>
-		<br>
-		<br>
-		<br>
+		<p>The Fiat ePER catalogue contains weight information for all the parts of the car.</p>
+		<p>I created a SwiftUI project to locate them, and so to approximate the center of gravity, as well as the moments of inertia in roll, yaw and pitch.<br>
+		I used the C library mdbtools to extract the information from the catalogue's database.</p>
+
+		<img src="ePER.jpeg"/>
 		
 		
-		<h2>
+		<h1>
 		Engine sound recreation
-		</h2>
+		</h1>
 		
-		<br>
-		I felt having a good, authentic engine sound was important because bad engine sounds stick out and make mods feel unpolished.<br>
-		<br>
-		In Assetto Corsa, I found engine sound quality comes down almost entirely to the quality of the sound capture.<br>
-		<br>
-		<img src="audacityInterior.jpg" height="500" />
-		<br>
+		<p>
+		I felt having a good, authentic engine sound was important because bad engine sounds stick out and make mods feel unpolished.
+		</p>
+		<p>
+		In Assetto Corsa, I found engine sound quality comes down almost entirely to the quality of the sound capture.
+		</p>
+		<img src="audacityInterior.jpg"/>
+		<p>
 		To capture interior engine sounds, I simply recorded from my computer's microphone after placing it in the passenger seat.<br>
+		</p>
 		
-		
-		<br>
+		<p>
 		For the exterior sound, I first recorded the engine sound from the side of the road, driving by at different RPM and engine loads.<br>
 		Problem was, from the side of the road, a road car's engine note like mine is typically drowned out by tyre noise,<br>
 		and I could not separate the engine note from the tyre noise in software. <br>
-		<br>
-		<img src="tonyBoot.jpg" height="500" />
-		<br>
+		</p>
+		<img src="tonyBoot.jpg" />
+		<p>
 		To partially solve this problem, I convinced a friend of mine to sit in my boot to record the sounds close to the exhaust. It was surprisingly confortable according to him. <br>
-		<br>
+		</p>
+		<p>
 		The recording is mixed-in for the chase view, but it is not a great solution : recording close to the exhaust introduced noise from the exhaust gas airflow,
 		but moving the microphone away introduced wind noises. <br>
-		<br>
-		<img src="audacityExterior.jpg" height="500" />
-		<br>
-		<br>
-		<br>
+		</p>
+		<img src="audacityExterior.jpg"/>
+		<p>
+			Overall, I feel mixed about the results. The interior sounds are correct but lack dynamic range and sound muffled.<br>
+			Exterior sounds are better, clearly recognizable, but some issues remain. Wind noise can be heard at high RPM, and the looping is noticeable in some samples. <br>
+		</p>
 		
 		
 		
-		<h2>Conclusion</h2>
+		<h1>Conclusion</h1>
 		
+		<p>
+			I have learned a great deal during this mod's development process. <br>
+			I thought I did a good job on the first try, when in fact, the initial and final versions are almost entirely different.<br>
+			In the end, I am very satisfied with the result.
+			<a target="_blank" href="https://www.overtake.gg/downloads/alfa-romeo-156-1-8ts-03.79300/">Here is a link to the download page.</a>
+		</p>
 		<br>
-		<img src="nurb.jpg" height="500" />
-		<br>
+		<p>
+			I have shown you all of this in the hope you can feel my dedication and passion for cars, driving dynamics and vehicle physics.
+		</p>
 		
-		I have shown you all of this in the hope you can feel my dedication and passion for cars, driving dynamics and vehicle physics.<br>
-		Thank you for your time.
-		<br>
+		<p>
+			Thank you for your time.
+		</p>
+
 		<div style="display: inline-block; text-align:left; font-family:'Arial'">
 			<ul>Contacts :<br>
 				<li><a href="https://www.linkedin.com/in/bastian-cataldi-31278b238/" target=”_blank”>LinkedIn</a></li>
@@ -156,6 +154,14 @@
 				
 			</ul>
 		</div>
+		<br>
+		<br>
+		<br>
+		<img src="nurb.jpg"/>
+		<br>
+		
+		
+		<br>
 		
 		<br>
 		<br>
