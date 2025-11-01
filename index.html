@@ -88,11 +88,18 @@
 		
 		<p>The Fiat ePER catalogue contains weight information for all the parts of the car, but it doesn't contain their position.</p>
 		<p>I created a tool in Swift/SwiftUI to streamline the process of locating the parts, in order to approximate the center of gravity, as well as the moments of inertia in roll, yaw and pitch.<br>
-		I used the C library mdbtools to extract the information from the catalogue's database.<br>
+		I used the C library mdbtools to extract information from the catalogue's database.<br>
 	</p>
 		
 
 		<img src="ePER.jpeg"/>
+
+		<p><br>These were some of the more notable and interesting steps of the physics modeling.<br>
+			<br>
+		There are clear areas of improvement, as bushing compliances are ignored when I believe they play a massive role in what the geometry looks like under loads.<br>
+		Damper dyno data doesn't exist and I only set their forces for a ~0.4 damping ratio all around.<br>
+		For the purposes of an Assetto Corsa mod, and since I cannot go much further without more data, I feel like the final result is a close enough approximation.
+		</p>
 		
 		
 		<h1>
