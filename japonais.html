@@ -1,105 +1,104 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ja">
 <head>
 	<meta content="BBEdit 15.0" charset="utf-8">
-	<title>アルファロメオ156ポリフォニー・ショーケース</title>
+	<meta name="description" content="Assetto Corsa用の私のAlfa Romeo 156開発ショーケース">
+	<meta name="author" content="Bastian Cataldi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alfa Romeo 156 ショーケース</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div style="text-align:center; font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro'" lang="ja-jp">
-		<h1>アルファロメオ156の再現について</h1>
-		<br>
-		<a href="index.html" lang="en-us">click here for the english version</a>
-		<br>
-		<br>
-		<br>
-		<img src="alfaNarrow.jpg" width="700" />
-		<br>
-		<p>現時点では、私の日本語力はこのページを書くほど充分ではありませんので、ご了承ください。お読みになる内容は、ページを日本語で読みたい場合のために追加した機械翻訳です。翻訳の正確性に関しては、お詫び申し上げます。</p>
-		<br>
-		私は今、シミュレーションゲーム『Assetto Corsa（アセットコルサ）』用に自分のクルマをモデリングしているところだ。<br>
-		Assetto Corsaは改造サポートが充実していることで知られており、それがこのプロジェクトに使用した理由です。<br>
-		<br>
-		この車は、素晴らしいエンジンとユニークなサスペンションセットアップのおかげで、とても楽しいドライブができます。私は、その再現においてこれを忠実に伝えようとしています。<br>
-		
+	<div style="font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro'" lang="ja-jp">
+		<header>
+		<h1>私のAlfa Romeo 156モデリング作業の一部</h1>
+		</header>
+		<img src="alfaNarrow.jpg"/>
+
 		<br>
 		<br>
 		<br>
-		
-		<h2>
-		3Dモデリング
-		</h2>
-		
-		<img src="photovs3DArriere.jpg" width="800" />
-		<br>
-		<img src="side.jpg" width="800" />
-		<br>
-		<img src="photovs3D.jpg" width="800" />
-		<br>
-		ゼロからクルマの3Dモデルを自作した。3Dモデリングを学びたかったからだ。また、Assetto Corsaのためのカスタムメイドの仕上がりにしたかったのですが、ネット上にはベースとなる良い3Dモデルがありませんでした。<br>
-		写真スキャンを使ってベースを作成し、その上でBlenderを使ってモデリングしました。<br>
-		私は物理的なモデリングに興味があったが、この車は本当に美しいので、見た目を正確に再現することが重要だった。結果には満足している。<br>
-		
-		<br>
-		<br>
-		<br>
-		<img src="scanInterior.jpg" height="300" />
-		<img src="interieur.jpg" height="300" />
-		<img src="interieurTex.jpg" height="300" />
-		<br>
-		インテリアのジオメトリのプレビューです。同じプロセスを使用しています。<br>
-		
-		<br>
-		<br>
-		<br>
-		
-		<h2>
-		物理モデリング
-		</h2>
-		
-		<img src="inclineCoG.jpg" height="400" />
-		<img src="suspension.jpg" height="400" />
-		<br>
-		フィアットはこのクルマに関する技術情報をあまり共有していないため、このクルマの物理を正確にモデリングするのは難しい。<br>
-		いくつかのデータについては推測や見積もりをしなければならないが、私はできるだけ測定に基づいてモデリングを行うようにしている。<br>
-		<br>
-		左側のスキャンは、車の重心の高さを計算するために農場の車軸重量計の上り坂で行われました。<br>
-		右側のスキャンでは、サスペンションのジオメトリを正確にモデル化するために、私のサスペンションをスキャンしました。<br>
-		この車は、前部にダブルウィッシュボーンサスペンションのユニークなセットアップを持ち、後部には特別なマルチリンクセットアップがあり、顕著なパッシブリアウィールステアリングを与えています。これをゲーム内で再現したいと考えています。<br>
-		<br>
+		<p style="color:red;">現時点では、私の日本語力はこのページを書くほど充分ではありませんので、ご了承ください。お読みになる内容は、ページを日本語で読みたい場合のために追加した機械翻訳です。翻訳の正確性に関しては、お詫び申し上げます。</p>
 		<br>
 		<br>
 
+		<p>私の個人的なプロジェクトの一つは、シミュレーションゲーム「Assetto Corsa」用に自分の車をモデリングすることでした。</p>
+		<p>このAlfa Romeo 156は、素晴らしいエンジンと独特なサスペンション構造のおかげで非常に運転が楽しく、<br>
+		私はその感覚を忠実に再現しようと試みました。</p>
+		<p>以下は、その目標を達成するために行った作業の概要です。</p>
 
-		私はスマートフォンを車に取り付けて走り回り、そのセンサーを使用して縦方向と横方向の加速度で車のピッチ／ロールのデータを収集しました。<br>
-		車の重心の高さとサスペンションのジオメトリーがわかっているので、このデータを利用して前後のホイールレートとアンチロールバーの剛性をおおよそ推定できると考えています。<br>
+		<h1>3Dモデリング</h1>
+		<p>3Dモデリングを学びたかったこと、Assetto Corsa専用に作りたかったこと、そして参考になる3Dモデルがオンラインに存在しなかったため、車の3Dモデルをゼロから自作しました。</p>
+		<p>Blenderを使い、フォトスキャンでベースを作成してモデリングを進めました。</p>
+		<p>私はどちらかというと物理モデリングに興味がありましたが、この車の美しさには特別な魅力があり、見た目を正確に再現することも重要でした。結果には満足しています。</p>
+		<img src="photovs3D.jpg"/><br>
+		<img src="side.jpg"/><br>
+		<img src="photovs3DArriere.jpg"/><br>
+		<p>Blenderのサブディビジョンワークフローでは、大きな曲線と細部のディテールを両立させるのが最も難しい課題でした。<br>
+		細部を追加すると大きな曲線が歪んでしまい、パネルが波打って見えることがありました。</p>
+		<p>例えば前ドアでは、ドアハンドルのくぼみ形状が側面の大きな曲線と干渉してしまいました。</p>
+		<p>そのためShrinkwrapモディファイアを使い、周囲の形状を固定したまま細部をモデリングできるようにしました。</p>
+		<p>トポロジーは完璧ではありませんが、Shrinkwrapのおかげで見た目は正しく仕上がっています。</p>
+		<img src="porteBrillant.jpg"/>
+		<br><br>
+		<p>内装のジオメトリも同じくフォトスキャンを用いて作成しました。</p>
+		<img src="scanInterior.jpg" style="height: 300px; width: auto;"/>
+		<img src="interieur.jpg" style="height: 300px; width: auto;"/>
+		<img src="interieurRender.jpg" style="height: 300px; width: auto;"/>
 
-		<img src="roll.svg" height="800" />
+		<h1>物理モデリング</h1>
+		<p>最初はワークショップマニュアル以外のデータをどこで入手すればよいかわからず、物理特性の正確なモデリングは難航しました。<br>
+		しかし、後にFiatのeLearnやePERページを見つけ、そこからスプリングレート、ダンパーストローク、スタビライザー径、部品重量などを取得しました。</p>
+		<p>サスペンションジオメトリを正確に再現するため、下のようにフォトグラメトリでサスペンションをスキャンしました。<br>
+		この車のリアには非対称マルチリンク構造があり、トー角がホイールストロークで大きく変化するため、受動的な後輪操舵を実現しています。</p>
+		<img src="frontScan.jpg" style="height: 400px; width: auto;"/>
+		<img src="lasArriere.jpg" style="height: 400px; width: auto;"/><br><br>
+		<p>当初はスマートフォンのIMUを使ってピッチやロールのデータを取得し、スタビライザーやスプリング剛性を推定できるか試しましたが、パラメータの不確定要素が多く、有意な結果は得られませんでした。</p>
+		<p>最終的にはFiatの資料から実際のスプリングレートを見つけ、スタビライザーの幾何から剛性を算出しました。これらの数値は品質確認程度の意味合いです。</p>
+		<img src="roll.svg" /><br>
+		<img src="simuData.png"/><br><br>
+		<p>Fiat ePERカタログには各部品の重量情報がありますが、位置情報は含まれていません。</p>
+		<p>そこで、Swift/SwiftUIでツールを作成し、部品の位置を特定して重心やロール・ヨー・ピッチの慣性モーメントを近似しました。<br>
+		データ抽出にはCライブラリのmdbtoolsを使用しました。</p>
+		<img src="ePER.jpeg"/>
+		<p><br>これらは物理モデリングの中で特に興味深い工程の一部です。<br><br>
+		改善の余地はあり、特にブッシュのたわみは考慮されていません。これは荷重下でのジオメトリ変化に大きく影響します。<br>
+		ダンパーの実測データも存在せず、全体でおよそ0.4の減衰比を設定したのみです。<br>
+		それでも、Assetto Corsa用Modとしては十分満足できる精度に仕上がったと思います。</p>
+
+		<h1>エンジンサウンド再現</h1>
+		<p>リアルなエンジンサウンドは非常に重要です。悪い音はMod全体の完成度を下げてしまいます。</p>
+		<p>Assetto Corsaでは、エンジンサウンドの品質は録音品質にほぼ完全に依存しています。</p>
+		<img src="audacityInterior.jpg"/>
+		<p>室内音の録音には、助手席にマイクを置いてパソコンのマイクで録音しました。</p>
+		<p>外部音は道路脇から異なる回転数と負荷で走行しながら録音しましたが、タイヤノイズにエンジン音がかき消され、ソフトウェアで分離できませんでした。</p>
+		<img src="tonyBoot.jpg" />
+		<p>そこで、友人にトランクに座ってもらい、マフラー近くで録音する方法を試しました。彼曰く意外と快適だったそうです。</p>
+		<p>この録音は追尾カメラ用にミックスしましたが、完璧ではありません。マフラー近くでは排気流のノイズが入り、離すと風切り音が増えてしまいました。</p>
+		<img src="audacityExterior.jpg"/>
+		<p>結果には賛否があります。室内音は正確ですがダイナミックレンジが狭く、こもった印象です。<br>
+		外部音はより自然で認識しやすいものの、高回転時の風切り音やサンプルのループ感が残っています。</p>
+
+		<h1>まとめ</h1>
+		<p>ここまでご覧いただき、私の車や走行ダイナミクス、車両物理への情熱を感じ取ってもらえたら嬉しいです。</p>
+		<p>このMod開発を通じて多くのことを学びました。<br>
+		最初のバージョンでは良い出来だと思っていましたが、最終版とはまるで別物です。<br>
+		最終的な結果にはとても満足しています。<br>
+		<a target="_blank" href="https://www.overtake.gg/downloads/alfa-romeo-156-1-8ts-03.79300/">こちらがダウンロードページです。</a></p>
 		<br>
-		<img src="pitch.svg" height="800" />
-		<br>
-		
-		<h2>結論</h2>
-		
-		私は、これらすべてを示すことで、車、ドライビングダイナミクス、車両物理学、そしてレースゲームへの情熱を感じていただけることを願っています。<br>
-		Gran Turismoが大好きであり、このインターンシップの面接の機会があれば、とても嬉しいです。<br>
-		<br>
+		<p>ご覧いただきありがとうございました。</p>
+
 		<div style="display: inline-block; text-align:left; font-family:'Arial'">
-			<ul>連絡先<br>
+			<ul>連絡先：<br>
 				<li><a href="https://www.linkedin.com/in/bastian-cataldi-31278b238/" target=”_blank”>LinkedIn</a></li>
 				<li><a href="mailto:bastian.cataldi@free.fr">bastian.cataldi@free.fr</a></li>
-				<li>+33 7 83 79 67 25
-				
+				<li>+33 (0)7 83 79 67 25</li>
 			</ul>
 		</div>
-		
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
-		
+		<br><br><br>
+		<img src="nurb.jpg"/>
+		<br><br><br><br><br><br>
 	</div>
 </body>
 </html>
+
